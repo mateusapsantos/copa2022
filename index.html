@@ -1,173 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" />
 
-  <title>Document</title>
-</head>
-<body>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul
+      class="nav nav-tabs w-100 justify-content-center overflow-hidden fixed-top bg-white align-items-center py-2"
+      style="height: 50px"
+    >
+      <li class="nav-item">
+        <button
+          style="font-size: 12px"
+          id="inicial"
+          class="nav-link bg-white-border-none fw-semibold"
+        >
+          Inicial
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          style="font-size: 12px"
+          id="oitavas"
+          class="nav-link bg-white-border-none fw-semibold"
+        >
+          Oitavas
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          style="font-size: 12px"
+          id="quartas"
+          class="nav-link bg-white-border-none fw-semibold"
+        >
+          Quartas
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          style="font-size: 12px"
+          id="semi"
+          class="nav-link bg-white-border-none fw-semibold"
+        >
+          Semi
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          style="font-size: 12px"
+          id="final"
+          class="nav-link bg-white-border-none fw-semibold"
+        >
+          Final
+        </button>
+      </li>
+    </ul>
 
-  <ul class="nav nav-tabs w-100 justify-content-center overflow-hidden  fixed-top bg-white align-items-center py-2" style="height: 50px;">
-    <li class="nav-item">
-      <button style="font-size: 12px;" id="inicial" class="nav-link bg-white-border-none fw-semibold">Inicial</button>
-    </li>
-    <li class="nav-item">
-      <button style="font-size: 12px;" id="oitavas" class="nav-link bg-white-border-none fw-semibold">Oitavas</button>
-    </li>
-    <li class="nav-item">
-      <button style="font-size: 12px;" id="quartas" class="nav-link bg-white-border-none fw-semibold">Quartas</button>
-    </li>
-    <li class="nav-item">
-      <button style="font-size: 12px;" id="semi" class="nav-link bg-white-border-none fw-semibold">Semi</button>
-    </li>
-    <li class="nav-item">
-      <button style="font-size: 12px;" id="final" class="nav-link bg-white-border-none fw-semibold">Final</button>
-    </li>
-
-  </ul>
-  
-  <div class="fixed-bottom bg-white border-top" style="z-index: 99; height: 50px;">
-    <div class="d-flex h-100 w-100 align-items-center justify-content-center">
-      <div class="custom-control custom-switch position-absolute p-3" >
-          <input type="checkbox" class="custom-control-input" id="darkSwitch">
-          <label class="custom-control-label" for="darkSwitch">Modo Escuro</label>
+    <div
+      class="fixed-bottom bg-white border-top"
+      style="z-index: 99; height: 50px"
+    >
+      <div class="d-flex h-100 w-100 align-items-center justify-content-center">
+        <div class="custom-control custom-switch position-absolute p-3">
+          <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+          <label class="custom-control-label" for="darkSwitch"
+            >Modo Escuro</label
+          >
           <script src="assets/js/dark-mode-switch.min.js"></script>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="container" style="margin-top: 70px; margin-bottom: 50px;">
-    <div id="app" class="row">
-
+    <div class="container" style="margin-top: 70px; margin-bottom: 50px">
+      <div id="app" class="row"></div>
     </div>
-  </div>
 
-  <div id="component-card" class="col-12 col-md-6 mb-4" style="display: none;">
-    <div class="card bg-white h-100" >
-      <div class="card-body">
-        <div class="row mt-3 py-2">
-          <div class="col-4 text-center">
-            <div class="d-flex h-100 flex-column align-items-center justify-content-center">
-              <div class="overflow-hidden rounded">
-                <img id="team-a-img" style="transform: scale(1.02);"  src="" class="card-img-top" alt="">
+    <div id="component-card" class="col-12 col-md-6 mb-4" style="display: none">
+      <div class="card bg-white h-100">
+        <div class="card-body">
+          <div class="row mt-3 py-2">
+            <div class="col-4 text-center">
+              <div
+                class="d-flex h-100 flex-column align-items-center justify-content-center"
+              >
+                <div class="overflow-hidden rounded">
+                  <img
+                    id="team-a-img"
+                    style="transform: scale(1.02)"
+                    src=""
+                    class="card-img-top"
+                    alt=""
+                  />
+                </div>
+                <p
+                  class="mt-2 fw-bold mb-0"
+                  style="min-height: 48px"
+                  id="team-a-name"
+                >
+                  TeamA
+                </p>
               </div>
-              <p class="mt-2 fw-bold mb-0" style="min-height: 48px;" id="team-a-name">TeamA</p>
             </div>
-          </div>
-          <div class="col-4 px-0 text-center position-relative">
-            <div class="d-flex flex-column w-100 h-100 align-items-center justify-content-center">
-              <div class="d-flex h-100 flex-row align-items-center justify-content-between p-2">
-                <h2 class="fw-bold" id="team-a-goals">2</h2>
-                <span style="opacity: .75;" class="fw-bold mx-2">x</span>
-                <h2  class="fw-bold" id="team-b-goals">5</h2>
-              </div>
-              <div id="penaltys" style="opacity: .75;" class="d-flex flex-row align-items-center justify-content-center position-absolute bottom-0">
-                <h6  class="fw-bold" id="penaltys-a">0</h6>
-                <h6 style="opacity: .75;" class="mx-2">x</h6>
-                <h6  class="fw-bold" id="penaltys-b">0</h6>
+            <div class="col-4 px-0 text-center position-relative">
+              <div
+                class="d-flex flex-column w-100 h-100 align-items-center justify-content-center"
+              >
+                <div
+                  class="d-flex h-100 flex-row align-items-center justify-content-between p-2"
+                >
+                  <h2 class="fw-bold" id="team-a-goals">2</h2>
+                  <span style="opacity: 0.75" class="fw-bold mx-2">x</span>
+                  <h2 class="fw-bold" id="team-b-goals">5</h2>
+                </div>
+                <div
+                  id="penaltys"
+                  style="opacity: 0.75"
+                  class="d-flex flex-row align-items-center justify-content-center position-absolute bottom-0"
+                >
+                  <h6 class="fw-bold" id="penaltys-a">0</h6>
+                  <h6 style="opacity: 0.75" class="mx-2">x</h6>
+                  <h6 class="fw-bold" id="penaltys-b">0</h6>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-4 text-center">
-            <div class="d-flex h-100 flex-column align-items-center justify-content-center">
-              <div class="overflow-hidden rounded">
-                <img id="team-b-img" style="transform: scale(1.02);" src="" class="card-img-top " alt="">
+            <div class="col-4 text-center">
+              <div
+                class="d-flex h-100 flex-column align-items-center justify-content-center"
+              >
+                <div class="overflow-hidden rounded">
+                  <img
+                    id="team-b-img"
+                    style="transform: scale(1.02)"
+                    src=""
+                    class="card-img-top"
+                    alt=""
+                  />
+                </div>
+                <p
+                  class="mt-2 fw-bold mb-0"
+                  style="min-height: 48px"
+                  id="team-b-name"
+                >
+                  TeamB
+                </p>
               </div>
-              <p class="mt-2 fw-bold mb-0" style="min-height: 48px;" id="team-b-name">TeamB</p>
             </div>
           </div>
         </div>
-  </div>
-      <!-- <h5 class="card-title">Card title</h5>
+        <!-- <h5 class="card-title">Card title</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="#" class="btn btn-primary">Go somewhere</a> -->
-      <div class="card-footer p-0">
-        <div id="sub-games" class="row"></div>
+        <div class="card-footer p-0">
+          <div id="sub-games" class="row"></div>
+        </div>
       </div>
     </div>
-  </div>
 
+    <script>
+      const images = {
+        Qatar: "./images/Qatar.jpeg",
+        Equador: "./images/Equador.jpeg",
+        Senegal: "./images/Senegal.jpeg",
+        Holanda: "./images/Holanda.jpeg",
+        Inglaterra: "./images/Inglaterra.jpeg",
+        Iran: "./images/Iran.jpeg",
+        "Estados Unidos": "./images/Estados Unidos.jpeg",
+        "País de Gales": "./images/País de Gales.jpeg",
+        Argentina: "./images/Argentina.jpeg",
+        "Arábia Saudita": "./images/Arábia Saudita.jpeg",
+        México: "./images/México.jpeg",
+        Polônia: "./images/Polônia.jpeg",
+        França: "./images/França.jpeg",
+        Austrália: "./images/Austrália.jpeg",
+        Dinamarca: "./images/Dinamarca.jpeg",
+        Tunísia: "./images/Tunísia.jpeg",
+        Espanha: "./images/Espanha.jpeg",
+        "Costa Rica": "./images/Costa Rica.jpeg",
+        Alemanha: "./images/Alemanha.jpeg",
+        Japão: "./images/Japão.jpeg",
+        Bélgica: "./images/Bélgica.jpeg",
+        Canadá: "./images/Canadá.jpeg",
+        Marrocos: "./images/Marrocos.jpeg",
+        Croácia: "./images/Croácia.jpeg",
+        Brasil: "./images/Brasil.jpeg",
+        Sérvia: "./images/Sérvia.jpeg",
+        Suiça: "./images/Suiça.jpeg",
+        Camarões: "./images/Camarões.jpeg",
+        Portugal: "./images/Portugal.jpeg",
+        Gana: "./images/Gana.jpeg",
+        Uruguai: "./images/Uruguai.jpeg",
+        "Coreia do Sul": "./images/Coreia do Sul.jpeg",
+      };
 
-  <script>
+      //inicio das funções para processamento do torneio
+      async function main() {
+        let data = [];
+        try {
+          const { Result } = await fetch(
+            "https://estagio.geopostenergy.com/WorldCup/GetAllTeams",
+            {
+              headers: {
+                "git-user": "mateusapsantos",
+              },
+            }
+          ).then((response) => response.json());
+          data = Result;
+        } catch (err) {
+          console.log(err);
+          data = await fetch("./data.json").then((response) => response.json());
+        }
 
-    const images = {
-      "Qatar": "./images/Qatar.jpeg",
-      "Equador": "./images/Equador.jpeg",
-      "Senegal": "./images/Senegal.jpeg",
-      "Holanda": "./images/Holanda.jpeg",
-      "Inglaterra": "./images/Inglaterra.jpeg",
-      "Iran": "./images/Iran.jpeg",
-      "Estados Unidos": "./images/Estados Unidos.jpeg",
-      "País de Gales": "./images/País de Gales.jpeg",
-      "Argentina": "./images/Argentina.jpeg",
-      "Arábia Saudita": "./images/Arábia Saudita.jpeg",
-      "México": "./images/México.jpeg",
-      "Polônia": "./images/Polônia.jpeg",
-      "França": "./images/França.jpeg",
-      "Austrália": "./images/Austrália.jpeg",
-      "Dinamarca": "./images/Dinamarca.jpeg",
-      "Tunísia": "./images/Tunísia.jpeg",
-      "Espanha": "./images/Espanha.jpeg",
-      "Costa Rica": "./images/Costa Rica.jpeg",
-      "Alemanha": "./images/Alemanha.jpeg",
-      "Japão": "./images/Japão.jpeg",
-      "Bélgica": "./images/Bélgica.jpeg",
-      "Canadá": "./images/Canadá.jpeg",
-      "Marrocos": "./images/Marrocos.jpeg",
-      "Croácia": "./images/Croácia.jpeg",
-      "Brasil": "./images/Brasil.jpeg",
-      "Sérvia": "./images/Sérvia.jpeg",
-      "Suiça": "./images/Suiça.jpeg",
-      "Camarões": "./images/Camarões.jpeg",
-      "Portugal": "./images/Portugal.jpeg",
-      "Gana": "./images/Gana.jpeg",
-      "Uruguai": "./images/Uruguai.jpeg",
-      "Coreia do Sul": "./images/Coreia do Sul.jpeg",
-    }
+        function getRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
 
-    async function main () {
-
-      let data = [];
-      try {
-        const { Result } = await fetch("https://estagio.geopostenergy.com/WorldCup/GetAllTeams", {
-          headers: { 
-            "git-user": "mateusapsantos"
-          }
-        }).then(response => response.json())
-        data = Result;
-      } catch (err) {
-        console.log(err);
-        data = await fetch("./data.json").then(response => response.json())
-      }
-
-      function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-      
-      function generationGroups (data=[], divider=8, subdivider=4) {
-        const groups = [];
-        const teams = [...data];
-        for (let index = 0; index < divider; index++) {
-          groups[index] = [];
-          for (let subIndex = 0; subIndex < subdivider; subIndex++) {
+        function generationGroups(data = [], divider = 8, subdivider = 4) {
+          const groups = [];
+          const teams = [...data];
+          for (let index = 0; index < divider; index++) {
+            groups[index] = [];
+            for (let subIndex = 0; subIndex < subdivider; subIndex++) {
               if (teams.length) {
-                const random = getRandomInt(0, (teams.length-1));
+                const random = getRandomInt(0, teams.length - 1);
                 groups[index].push(teams[random]);
                 teams.splice(random, 1);
               }
+            }
           }
+          return groups;
         }
-        return groups;
-      }
 
-      function generationGame (A={ Token: "", Name: "" }, B={ Token: "", Name: "" }, faseInitial=false) {
+        function generationGame(
+          A = { Token: "", Name: "" },
+          B = { Token: "", Name: "" },
+          faseInitial = false
+        ) {
           const goalsA = getRandomInt(0, 10);
           const goalsB = getRandomInt(0, 10);
 
@@ -187,7 +267,7 @@
           } else {
             teamA.points = 1;
             teamB.points = 1;
-            
+
             if (!faseInitial) {
               teamA.penaltys = getRandomInt(0, 5);
               teamB.penaltys = getRandomInt(0, 5);
@@ -210,107 +290,151 @@
               }
             }
           }
-          return ({ win, looser, teams: [teamA, teamB] })
-      }
-
-
-      function getHighestValueInArray (array=[], field="goals") {
-        return array.reduce(function(prev, current) {
-            return (prev[field] > current[field]) ? prev : (prev[field] < current[field]) ? current : null
-        })
-      }
-
-      function getLowerValueInArray (array=[], field="goals") {
-        return array.reduce(function(prev, current) {
-            return (prev[field] < current[field]) ? prev : (prev[field] > current[field]) ? current : null
-        })
-      }
-
-      function generationGamesForGroup (group=[{ Token: "", Name: "" }]) {
-        const match = generationGroups(group, 2, 2);
-        const games = match.map(([teamA, teamB], index) => generationGame(teamA, teamB, true))
-        const winers = games.map(game => {
-          const highestGoals = getHighestValueInArray(game.teams, "goals");
-          const lowerScoredGoals = getLowerValueInArray(game.teams, "scored_goals");
-          return highestGoals || lowerScoredGoals || game.teams[0];
-        })
-        const final = generationGame(winers[0], winers[1], true);
-
-        return {
-          games: [...games, final],
-          final,
-          win: final.win || final.teams[0],
-          vice: final.looser || final.teams[1],
+          return { win, looser, teams: [teamA, teamB] };
         }
-      }
 
-      function array_chunks (array=[], num=2) {
-        return array.reduce((acc,val,index) => {
-          const base = Math.floor(index/num); 
-          acc[base] = [].concat((acc[base]||[]),val); 
-          return acc
-        }, [])
-      }
-
-      const groups = generationGroups(data);
-
-      const grupos_jogos = groups.map(group => generationGamesForGroup(group));
-
-      const oitavas_escala_pre = grupos_jogos.map(game => [game.win, game.vice]);
-
-      const oitavas_escala = oitavas_escala_pre.map((teams, index) => {
-        const [first, second] = (index % 2 === 0) ? [[index, 0], [index+1, 1]] : [[index-1, 1], [index, 0]];
-        return [oitavas_escala_pre[first[0]][first[1]], oitavas_escala_pre[second[0]][second[1]]]
-      });
-
-      const oitavas_jogos = oitavas_escala.map(([teamA, teamB]) => generationGame(teamA, teamB));
-
-      const quartas_scala = array_chunks(oitavas_jogos.map(game => game.win || game.teams[0]), 2);
-      
-      const quartas_jogos = quartas_scala.map(([teamA, teamB]) => generationGame(teamA, teamB));
-
-      const semi_scala = array_chunks(quartas_jogos.map(game => game.win || game.teams[0]), 2);
-
-      const semi_jogos = semi_scala.map(([teamA, teamB]) => generationGame(teamA, teamB));
-
-      const final_scala = array_chunks(semi_jogos.map(game => game.win || game.teams[0]), 2);
-
-      const final_jogos = final_scala.map(([teamA, teamB]) => generationGame(teamA, teamB));
-
-      function hasClass(ele,cls) {
-        return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-      }
-
-      function addClass(ele,cls) {
-        if (!hasClass(ele,cls)) ele.className += " "+cls;
-      }
-
-      function removeClass(ele,cls) {
-        if (hasClass(ele,cls)) {
-          var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-          ele.className=ele.className.replace(reg,' ');
+        function getHighestValueInArray(array = [], field = "goals") {
+          return array.reduce(function (prev, current) {
+            return prev[field] > current[field]
+              ? prev
+              : prev[field] < current[field]
+              ? current
+              : null;
+          });
         }
-      }
 
-      function insertParam(key,value) {
+        function getLowerValueInArray(array = [], field = "goals") {
+          return array.reduce(function (prev, current) {
+            return prev[field] < current[field]
+              ? prev
+              : prev[field] > current[field]
+              ? current
+              : null;
+          });
+        }
+
+        function generationGamesForGroup(group = [{ Token: "", Name: "" }]) {
+          const match = generationGroups(group, 2, 2);
+          const games = match.map(([teamA, teamB], index) =>
+            generationGame(teamA, teamB, true)
+          );
+          const winers = games.map((game) => {
+            const highestGoals = getHighestValueInArray(game.teams, "goals");
+            const lowerScoredGoals = getLowerValueInArray(
+              game.teams,
+              "scored_goals"
+            );
+            return highestGoals || lowerScoredGoals || game.teams[0];
+          });
+          const final = generationGame(winers[0], winers[1], true);
+
+          return {
+            games: [...games, final],
+            final,
+            win: final.win || final.teams[0],
+            vice: final.looser || final.teams[1],
+          };
+        }
+
+        function array_chunks(array = [], num = 2) {
+          return array.reduce((acc, val, index) => {
+            const base = Math.floor(index / num);
+            acc[base] = [].concat(acc[base] || [], val);
+            return acc;
+          }, []);
+        }
+
+        const groups = generationGroups(data);
+
+        const grupos_jogos = groups.map((group) =>
+          generationGamesForGroup(group)
+        );
+
+        const oitavas_escala_pre = grupos_jogos.map((game) => [
+          game.win,
+          game.vice,
+        ]);
+
+        const oitavas_escala = oitavas_escala_pre.map((teams, index) => {
+          const [first, second] =
+            index % 2 === 0
+              ? [
+                  [index, 0],
+                  [index + 1, 1],
+                ]
+              : [
+                  [index - 1, 1],
+                  [index, 0],
+                ];
+          return [
+            oitavas_escala_pre[first[0]][first[1]],
+            oitavas_escala_pre[second[0]][second[1]],
+          ];
+        });
+
+        const oitavas_jogos = oitavas_escala.map(([teamA, teamB]) =>
+          generationGame(teamA, teamB)
+        );
+
+        const quartas_scala = array_chunks(
+          oitavas_jogos.map((game) => game.win || game.teams[0]),
+          2
+        );
+
+        const quartas_jogos = quartas_scala.map(([teamA, teamB]) =>
+          generationGame(teamA, teamB)
+        );
+
+        const semi_scala = array_chunks(
+          quartas_jogos.map((game) => game.win || game.teams[0]),
+          2
+        );
+
+        const semi_jogos = semi_scala.map(([teamA, teamB]) =>
+          generationGame(teamA, teamB)
+        );
+
+        const final_scala = array_chunks(
+          semi_jogos.map((game) => game.win || game.teams[0]),
+          2
+        );
+
+        const final_jogos = final_scala.map(([teamA, teamB]) =>
+          generationGame(teamA, teamB)
+        );
+
+        function hasClass(ele, cls) {
+          return !!ele.className.match(new RegExp("(\\s|^)" + cls + "(\\s|$)"));
+        }
+
+        function addClass(ele, cls) {
+          if (!hasClass(ele, cls)) ele.className += " " + cls;
+        }
+
+        function removeClass(ele, cls) {
+          if (hasClass(ele, cls)) {
+            var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
+            ele.className = ele.className.replace(reg, " ");
+          }
+        }
+
+        function insertParam(key, value) {
           const url = new URL(window.location);
           url.searchParams.set(key, value);
-          window.history.pushState(null, '', url.toString());
-      }
+          window.history.pushState(null, "", url.toString());
+        }
 
-      function searchParam(key) {
-        const url = new URL(window.location);
-        return url.searchParams.get(key)
-      }
+        function searchParam(key) {
+          const url = new URL(window.location);
+          return url.searchParams.get(key);
+        }
 
+        const app = document.getElementById("app");
 
-      const app = document.getElementById("app");
-      
-      const component = document.getElementById("component-card");
-      component.setAttribute("id", "");
-      
-      function onChange(id="inicial") {
+        const component = document.getElementById("component-card");
+        component.setAttribute("id", "");
 
+        function onChange(id = "inicial") {
           while (app.firstChild) {
             app.removeChild(app.lastChild);
           }
@@ -319,150 +443,185 @@
           switch (id) {
             case "inicial":
               data = grupos_jogos;
-              insertParam("match", "inicial")
+              insertParam("match", "inicial");
               break;
             case "oitavas":
               data = oitavas_jogos;
-              insertParam("match", "oitavas")
+              insertParam("match", "oitavas");
               break;
             case "quartas":
               data = quartas_jogos;
-              insertParam("match", "quartas")
+              insertParam("match", "quartas");
               break;
             case "semi":
               data = semi_jogos;
-              insertParam("match", "semi")
+              insertParam("match", "semi");
               break;
             case "final":
               data = final_jogos;
-              insertParam("match", "final")
+              insertParam("match", "final");
               break;
             default:
               data = grupos_jogos;
-              insertParam("match", "inicial")
+              insertParam("match", "inicial");
               break;
           }
 
-          data.forEach(item => {
+          data.forEach((item) => {
             const newComponent = component.cloneNode(true);
             newComponent.setAttribute("style", "display: block !important;");
 
             const win = item?.win || item?.teams?.[0];
             const looser = item?.vice || item?.looser || item?.teams?.[1];
 
-            const havePenaltys = (win?.penaltys && looser?.penaltys);
+            const havePenaltys = win?.penaltys && looser?.penaltys;
 
             if (!havePenaltys) {
-              newComponent.querySelector("#penaltys").setAttribute("style", "display: none !important;");
+              newComponent
+                .querySelector("#penaltys")
+                .setAttribute("style", "display: none !important;");
             } else {
-              newComponent.querySelector("#penaltys-a").innerHTML = win?.penaltys;
-              newComponent.querySelector("#penaltys-b").innerHTML = looser?.penaltys;
+              newComponent.querySelector("#penaltys-a").innerHTML =
+                win?.penaltys;
+              newComponent.querySelector("#penaltys-b").innerHTML =
+                looser?.penaltys;
             }
 
             if (item.games?.length) {
               const [first_game, second_game] = item.games;
-              
+
               [first_game, second_game].forEach((game, index) => {
                 const subNewComponent = component.cloneNode(true);
-                subNewComponent.setAttribute("style", "display: block !important;");
+                subNewComponent.setAttribute(
+                  "style",
+                  "display: block !important;"
+                );
 
-                subNewComponent.querySelector("#penaltys").setAttribute("style", "display: none !important;");
+                subNewComponent
+                  .querySelector("#penaltys")
+                  .setAttribute("style", "display: none !important;");
 
                 removeClass(subNewComponent, "col-12");
                 removeClass(subNewComponent, "col-md-6");
                 removeClass(subNewComponent, "mb-4");
-                addClass(subNewComponent, "col-6")
-                addClass(subNewComponent, index === 0 ? "pe-0" : "ps-0")
+                addClass(subNewComponent, "col-6");
+                addClass(subNewComponent, index === 0 ? "pe-0" : "ps-0");
 
-                addClass(subNewComponent.querySelector(".card"), "border-0")
-                addClass(subNewComponent.querySelector(".card"), "border-start-1")
-
+                addClass(subNewComponent.querySelector(".card"), "border-0");
+                addClass(
+                  subNewComponent.querySelector(".card"),
+                  "border-start-1"
+                );
 
                 console.log({ game });
 
                 if (game?.teams?.length) {
-
                   game?.teams?.forEach((team, i) => {
                     const key = i === 0 ? "a" : "b";
 
                     //setando iamges dos times
-                    subNewComponent.querySelector(`#team-${key}-img`).src = images[team?.Name];
-                    subNewComponent.querySelector(`#team-${key}-img`).setAttribute("style", "transform: scale(0.75);");
-                    
+                    subNewComponent.querySelector(`#team-${key}-img`).src =
+                      images[team?.Name];
+                    subNewComponent
+                      .querySelector(`#team-${key}-img`)
+                      .setAttribute("style", "transform: scale(0.75);");
+
                     // // setando nomes dos times
-                    subNewComponent.querySelector(`#team-${key}-name`).innerHTML = team?.Name;
-                    subNewComponent.querySelector(`#team-${key}-name`).setAttribute("style", "font-size: 10px !important;");
-                    
+                    subNewComponent.querySelector(
+                      `#team-${key}-name`
+                    ).innerHTML = team?.Name;
+                    subNewComponent
+                      .querySelector(`#team-${key}-name`)
+                      .setAttribute("style", "font-size: 10px !important;");
+
                     // //setando goals dos times
-                    subNewComponent.querySelector(`#team-${key}-goals`).innerHTML = team?.goals || 0;
-                    subNewComponent.querySelector(`#team-${key}-goals`).setAttribute("style", "transform: scale(0.75);");
-                  })
+                    subNewComponent.querySelector(
+                      `#team-${key}-goals`
+                    ).innerHTML = team?.goals || 0;
+                    subNewComponent
+                      .querySelector(`#team-${key}-goals`)
+                      .setAttribute("style", "transform: scale(0.75);");
+                  });
                 }
 
-                newComponent.querySelector("#sub-games").appendChild(subNewComponent);
-              })
+                newComponent
+                  .querySelector("#sub-games")
+                  .appendChild(subNewComponent);
+              });
             }
 
             //setando iamges dos times
             newComponent.querySelector("#team-a-img").src = images[win?.Name];
-            newComponent.querySelector("#team-b-img").src = images[looser?.Name];
+            newComponent.querySelector("#team-b-img").src =
+              images[looser?.Name];
 
             // setando nomes dos times
             newComponent.querySelector("#team-a-name").innerHTML = win?.Name;
             newComponent.querySelector("#team-b-name").innerHTML = looser?.Name;
 
             //setando goals dos times
-            newComponent.querySelector("#team-a-goals").innerHTML = win?.goals || 0;
-            newComponent.querySelector("#team-b-goals").innerHTML = looser?.goals || 0;
+            newComponent.querySelector("#team-a-goals").innerHTML =
+              win?.goals || 0;
+            newComponent.querySelector("#team-b-goals").innerHTML =
+              looser?.goals || 0;
 
             app.appendChild(newComponent);
-          })
+          });
+        }
+
+        const ids = ["inicial", "oitavas", "quartas", "semi", "final"];
+        ids.forEach((id, index) => {
+          const buttonEl = document.getElementById(id);
+          buttonEl.addEventListener("click", function () {
+            ids.forEach((id) =>
+              removeClass(document.getElementById(id), "active")
+            );
+            addClass(buttonEl, "active");
+            onChange(id);
+          });
+        });
+
+        const initial = searchParam("match") || "inicial";
+        const buttonEl = document.getElementById(initial);
+        addClass(buttonEl, "active");
+        onChange(initial);
+
+        const body = {
+          equipeA: final_jogos[0].win.Token,
+          equipeB: final_jogos[0].looser.Token,
+          goalsEquipeA: final_jogos[0].win.goals,
+          goalsEquipeB: final_jogos[0].looser.goals,
+          goalsPenaltyTimeA: final_jogos[0].win.penaltys,
+          goalsPenaltyTimeB: final_jogos[0].looser.penaltys,
+        };
+
+        try {
+          const res = await fetch(
+            "https://estagio.geopostenergy.com/WorldCup/InsertFinalResult",
+            {
+              method: "POST",
+              headers: {
+                "git-user": "mateusapsantos",
+                Accept: "application/json",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(body),
+            }
+          ).then((response) => response.json());
+          console.log({ res });
+        } catch (err) {
+          console.log(err);
+        }
       }
 
-      const ids = ['inicial', "oitavas", "quartas", "semi", "final"];
-      ids.forEach((id, index) => {
-        const buttonEl = document.getElementById(id);
-        buttonEl.addEventListener("click", function () {
-          ids.forEach(id => removeClass(document.getElementById(id), "active"));
-          addClass(buttonEl, "active");
-          onChange(id);
-        })
-      })
-
-      const initial = searchParam("match") || "inicial";
-      const buttonEl = document.getElementById(initial);
-      addClass(buttonEl, "active");
-      onChange(initial);
-
-      const body = {
-        "equipeA": final_jogos[0].win.Token,
-        "equipeB": final_jogos[0].looser.Token,
-        "goalsEquipeA": final_jogos[0].win.goals,
-        "goalsEquipeB": final_jogos[0].looser.goals,
-        "goalsPenaltyTimeA": final_jogos[0].win.penaltys,
-        "goalsPenaltyTimeB": final_jogos[0].looser.penaltys
-      }
-
-      try {
-        const res = await fetch("https://estagio.geopostenergy.com/WorldCup/InsertFinalResult", {
-          method: "POST",
-          headers: { 
-            "git-user": "mateusapsantos",
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(body)
-        }).then(response => response.json())
-        console.log({res});
-      } catch (err) {
-        console.log(err);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function(event) {
-      main();
-    })
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-</body>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        main();
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
